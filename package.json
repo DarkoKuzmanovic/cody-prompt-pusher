@@ -1,0 +1,86 @@
+{
+  "name": "cody-prompt-pusher",
+  "displayName": "CodyPromptPusher",
+  "description": "Add multiple files to Cody Chat from Explorer",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:codyPromptPusher.addToCody"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codyPromptPusher.addToCody",
+        "title": "Add to Cody Chat"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "codyPromptPusher.addToCody",
+          "group": "navigation",
+          "when": "explorerViewletVisible"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CodyPromptPusher",
+      "properties": {
+        "codyPromptPusher.delayBetweenFiles": {
+          "type": "number",
+          "default": 500,
+          "description": "Delay in milliseconds between adding files to Cody Chat"
+        },
+        "codyPromptPusher.maxFilesAtOnce": {
+          "type": "number",
+          "default": 10,
+          "description": "Maximum number of files that can be added at once"
+        },
+        "codyPromptPusher.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications when files are added to Cody Chat"
+        },
+        "codyPromptPusher.excludePatterns": {
+          "type": "array",
+          "default": [
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            ".next",
+            ".vscode"
+          ],
+          "description": "Patterns to exclude when scanning folders"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "eslint": "^7.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  }
+}
