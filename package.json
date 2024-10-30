@@ -3,7 +3,7 @@
   "displayName": "Cody Prompt Pusher",
   "description": "Add multiple files to Cody Chat from Explorer",
   "icon": "images/icon.png",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "quzma",
   "engines": {
     "vscode": "^1.60.0"
@@ -49,8 +49,8 @@
       "explorer/context": [
         {
           "command": "codyPromptPusher.addToCody",
-          "group": "navigation",
-          "when": "explorerViewletVisible"
+          "group": "0_codyPromptPusher",
+          "when": "explorerViewletVisible && cody.activated"
         }
       ]
     },
@@ -59,12 +59,12 @@
       "properties": {
         "codyPromptPusher.delayBetweenFiles": {
           "type": "number",
-          "default": 500,
+          "default": 200,
           "description": "Delay in milliseconds between adding files to Cody Chat"
         },
         "codyPromptPusher.maxFilesAtOnce": {
           "type": "number",
-          "default": 10,
+          "default": 15,
           "description": "Maximum number of files that can be added at once"
         },
         "codyPromptPusher.showNotifications": {

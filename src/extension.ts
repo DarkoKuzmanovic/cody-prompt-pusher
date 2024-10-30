@@ -142,8 +142,8 @@ export function activate(context: vscode.ExtensionContext) {
 function getConfiguration(): CodyPromptPusherConfig {
   const config = vscode.workspace.getConfiguration("codyPromptPusher");
   return {
-    delayBetweenFiles: config.get("delayBetweenFiles", 500),
-    maxFilesAtOnce: config.get("maxFilesAtOnce", 10),
+    delayBetweenFiles: config.get("delayBetweenFiles", 200),
+    maxFilesAtOnce: config.get("maxFilesAtOnce", 15),
     showNotifications: config.get("showNotifications", true),
     excludePatterns: config.get("excludePatterns", ["node_modules", ".git", "dist", "build", ".next", ".vscode"]),
   };

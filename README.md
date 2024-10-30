@@ -1,6 +1,10 @@
-# CodyPromptPusher
+# Cody Prompt Pusher
 
-CodyPromptPusher is a Visual Studio Code extension that enhances your workflow with Sourcegraph's Cody by allowing you to easily add files and folders to Cody Chat through the context menu.
+Cody Prompt Pusher is a Visual Studio Code extension that enhances your workflow with Sourcegraph's Cody by allowing you to easily add files and folders to Cody Chat through the context menu.
+
+## Requirements
+
+- Installed Souregraph's [Cody](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) extension in VSCode.
 
 ## Features
 
@@ -11,7 +15,10 @@ CodyPromptPusher is a Visual Studio Code extension that enhances your workflow w
 - 🎯 Smart file exclusion patterns
 - 📝 Multiple file selection support
 
+## Demo
+
 ![Extension Demo](images/demo.gif)
+_Extension demo_
 
 ## Installation
 
@@ -49,17 +56,17 @@ Access settings through:
 
 1. Command Palette (Ctrl+Shift+P)
 2. Type "Preferences: Open Settings (UI)"
-3. Search for "CodyPromptPusher"
+3. Search for "Cody Prompt Pusher"
 
 Available settings:
 
 ```json
 {
   // Delay between processing files (in milliseconds)
-  "codyPromptPusher.delayBetweenFiles": 500,
+  "codyPromptPusher.delayBetweenFiles": 200,
 
   // Maximum number of files to process at once
-  "codyPromptPusher.maxFilesAtOnce": 10,
+  "codyPromptPusher.maxFilesAtOnce": 15,
 
   // Show notification for each processed file
   "codyPromptPusher.showNotifications": true,
@@ -73,8 +80,8 @@ Available settings:
 
 | Setting           | Description                                         | Default               |
 | ----------------- | --------------------------------------------------- | --------------------- |
-| delayBetweenFiles | Time to wait between processing files               | 500ms                 |
-| maxFilesAtOnce    | Maximum number of files to process in one operation | 10                    |
+| delayBetweenFiles | Time to wait between processing files               | 200ms                 |
+| maxFilesAtOnce    | Maximum number of files to process in one operation | 15                    |
 | showNotifications | Show success notification for each file             | true                  |
 | excludePatterns   | Patterns to skip when scanning folders              | ["node_modules", ...] |
 
@@ -108,6 +115,15 @@ Developed by [Darko Kuzmanović](https://quz.ma)
 
 ### 0.1.0
 
+- Replaced multiple stacking notifications with a single progress bar
+- Added one summary notification upon completion
+- Moved "Add to Cody Chat" menu item to a more logical position above the Share menu
+- Changed icon
+- Improved demo.gif
+- Tweaked default values.
+
+### 0.0.1
+
 - Initial release
 - Support for files and folders
 - Configurable processing options
@@ -122,6 +138,6 @@ Developed by [Darko Kuzmanović](https://quz.ma)
 
 For support, please:
 
-1. Check the [FAQ](link-to-faq)
-2. Search [existing issues](link-to-issues)
-3. Create a new issue if needed
+1. Search [existing issues](link-to-issues)
+2. Create a new issue if needed
+3. Send me an email to darko@quz.ma
