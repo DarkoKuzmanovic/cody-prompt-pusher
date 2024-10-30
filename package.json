@@ -9,6 +9,30 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarkoKuzmanovic/cody-prompt-pusher"
+  },
+  "keywords": [
+    "cody",
+    "sourcegraph",
+    "chat",
+    "files",
+    "productivity",
+    "context",
+    "ai",
+    "assistant"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#6d6d6d",
+    "theme": "dark"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarkoKuzmanovic/cody-prompt-pusher/issues"
+  },
+  "homepage": "https://github.com/DarkoKuzmanovic/cody-prompt-pusher#readme",
   "activationEvents": [
     "onCommand:codyPromptPusher.addToCody"
   ],
