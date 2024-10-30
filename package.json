@@ -2,7 +2,9 @@
   "name": "cody-prompt-pusher",
   "displayName": "Cody Prompt Pusher",
   "description": "Add multiple files to Cody Chat from Explorer",
+  "icon": "images/icon.png",
   "version": "0.0.1",
+  "publisher": "quzma",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -23,7 +25,6 @@
     "ai",
     "assistant"
   ],
-  "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#6d6d6d",
     "theme": "dark"
